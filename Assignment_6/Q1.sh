@@ -1,12 +1,9 @@
-factorial () {
-	if (( $1 <= 1 ));
-	then
-		echo 1
-	else
-		echo $(( $1 * $(factorial $(( $1 - 1 ))) ))
-	fi
-}
-
-factorial 5
-
-	
+read -p"Enter a number: " a 
+i=1
+fac=1
+while [ $i -le $a ]
+do
+	fac=$((fac * i))
+	i=$((i + 1))	
+done
+echo "$fac"
